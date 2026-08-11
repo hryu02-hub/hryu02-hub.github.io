@@ -9,10 +9,11 @@
 
   <meta
     name="description"
-    content="Hansol Ryu - Undergraduate researcher interested in robot learning, reinforcement learning, control, dynamics, and computer vision."
+    content="Hansol Ryu - Undergraduate researcher in robot learning at Seoul National University."
   >
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Change version number when CSS is updated to avoid browser cache -->
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 
 
@@ -39,11 +40,27 @@
         </p>
 
         <div class="hero-links">
-          <a href="files/Hansol_Ryu_CV.pdf" target="_blank">CV</a>
-          <a href="https://github.com/hryu02-hub" target="_blank">GitHub</a>
-          <a href="mailto:YOUR_EMAIL@snu.ac.kr">Email</a>
+          <a href="Hansol_Ryu_CV.pdf" target="_blank">
+            CV
+          </a>
+
+          <a
+            href="https://github.com/hryu02-hub"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a href="mailto:hansol02ryu@snu.ac.kr">
+            Email
+          </a>
         </div>
 
+
+        <!-- =====================================================
+             BIO
+        ====================================================== -->
 
         <div class="bio">
 
@@ -51,11 +68,24 @@
             I am a senior undergraduate student in Mechanical Engineering and
             Computer Science at Seoul National University. I am currently
             conducting my B.S. thesis research in the
-            <strong>Robotics Laboratory</strong> with
-            <strong>Prof. Frank C. Park</strong>. Previously, I worked on robot
-            perception for tabletop cluttered scenes in the
-            <strong>RPM Robotics Lab</strong> with
-            <strong>Prof. Ayoung Kim</strong>.
+            <a
+              href="https://sites.google.com/robotics.snu.ac.kr/fcp/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>Robotics Laboratory</strong>
+            </a>
+            with <strong>Prof. Frank C. Park</strong>.
+            Previously, I worked on robot perception for tabletop cluttered
+            scenes in the
+            <a
+              href="https://rpm.snu.ac.kr/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <strong>RPM Robotics Lab</strong>
+            </a>
+            with <strong>Prof. Ayoung Kim</strong>.
           </p>
 
           <p>
@@ -74,13 +104,13 @@
       </div>
 
 
-      <!-- Replace this div with an image later -->
+      <!-- Profile photo can replace this later -->
       <div class="profile-placeholder">
         <span>HR</span>
       </div>
 
       <!--
-      Later, replace the placeholder above with:
+      To use a profile photo later, replace the block above with:
 
       <img
         class="profile-photo"
@@ -102,15 +132,19 @@
       <h2>Selected Research</h2>
 
 
-      <!-- Research 1 -->
+      <!-- =====================================================
+           FRANK PARK LAB
+      ====================================================== -->
+
       <article class="research-item">
 
+        <!-- Replace this placeholder with a research image later -->
         <div class="research-visual robot-learning">
           <span>Robot Learning</span>
         </div>
 
         <!--
-        Later replace the div above with:
+        Later, replace the block above with:
 
         <img
           class="research-image"
@@ -123,21 +157,42 @@
         <div class="research-content">
 
           <p class="research-lab">
-            Robotics Laboratory · Seoul National University
+            <a
+              href="https://sites.google.com/robotics.snu.ac.kr/fcp/home"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Robotics Laboratory
+            </a>
+            · Seoul National University
           </p>
 
-          <h3>Visuomotor Robot Learning</h3>
+          <h3>
+            Geometric Visuomotor Learning for Robot Manipulation
+          </h3>
 
           <p>
-            Studying visuomotor policies and geometric representations for
-            robotic manipulation, with an emphasis on leveraging structure
-            from robot geometry, dynamics, and physical interaction.
+            I study how geometric representations and feedback mechanisms can
+            improve the robustness of learned visuomotor policies during
+            physical interaction. My current work investigates how policy
+            representations behave under geometric transformations and how
+            learned visuomotor policies can be combined with model-based robot
+            control and force feedback.
+          </p>
+
+          <p class="research-detail">
+            I developed simulation and evaluation pipelines combining
+            diffusion-based visuomotor policies with Cartesian impedance and
+            compliance control, and compared world-frame and
+            end-effector-local policy representations under spatial
+            transformations.
           </p>
 
           <div class="research-tags">
             <span>Robot Learning</span>
-            <span>Manipulation</span>
+            <span>Visuomotor Policy</span>
             <span>Geometric Learning</span>
+            <span>Robot Control</span>
           </div>
 
         </div>
@@ -146,42 +201,56 @@
 
 
 
-      <!-- Research 2 -->
+      <!-- =====================================================
+           RPM ROBOTICS LAB
+      ====================================================== -->
+
       <article class="research-item">
-
-        <div class="research-visual perception">
-          <span>Robot Perception</span>
-        </div>
-
-        <!--
-        Later replace the div above with:
 
         <img
           class="research-image"
-          src="assets/robot-perception.jpg"
-          alt="Robot perception research"
+          src="assets/perception.jpg"
+          alt="VLM-guided active perception for robotic manipulation"
         >
-        -->
 
 
         <div class="research-content">
 
           <p class="research-lab">
-            RPM Robotics Lab · Seoul National University
+            <a
+              href="https://rpm.snu.ac.kr/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RPM Robotics Lab
+            </a>
+            · Seoul National University
           </p>
 
-          <h3>Robot Perception in Cluttered Scenes</h3>
+          <h3>
+            VLM-Guided Active Perception for Cluttered Manipulation
+          </h3>
 
           <p>
-            Worked on perception for tabletop cluttered environments,
-            including 3D scene representations, active perception,
-            viewpoint selection, and real-robot evaluation.
+            I worked on robot perception for post-grasp retrieval in cluttered
+            tabletop scenes, where a robot must extract a target object while
+            minimizing disturbance to surrounding objects.
+          </p>
+
+          <p class="research-detail">
+            I implemented and evaluated a TSDF-based active-perception baseline,
+            investigated TSDF and 3D Gaussian Splatting as 3D scene
+            representations, developed a VLM-based pipeline for selecting
+            retrieval directions from visual observations, and designed the
+            real-robot evaluation pipeline and quantitative disturbance
+            metrics.
           </p>
 
           <div class="research-tags">
-            <span>Computer Vision</span>
-            <span>3D Perception</span>
+            <span>Robot Perception</span>
             <span>Active Perception</span>
+            <span>VLM</span>
+            <span>3D Representation</span>
           </div>
 
         </div>
@@ -200,27 +269,108 @@
 
       <h2>Publications</h2>
 
-      <p class="muted">
-        Publications and research manuscripts will be listed here.
-      </p>
-
-      <!--
-      Example:
-
       <div class="publication">
+
         <p class="publication-title">
-          Paper Title
+          Post-Grasp Retrieval in Cluttered Scenes via Zero-Shot
+          VLM-Guided Spatial Reasoning and Active Perception
         </p>
 
         <p class="publication-authors">
-          Author A, Hansol Ryu, Author B
+          S. H. Jeong, M. Kim, <strong>H. Ryu</strong>,
+          J. Noh, and A. Kim
         </p>
 
         <p class="publication-venue">
-          IEEE Robotics and Automation Letters, 2026
+          IEEE Robotics and Automation Letters (RA-L),
+          under review, 2026
         </p>
+
       </div>
-      -->
+
+    </section>
+
+
+
+    <!-- =========================================================
+         SELECTED PROJECTS
+    ========================================================== -->
+
+    <section class="section">
+
+      <h2>Selected Projects</h2>
+
+
+      <!-- =====================================================
+           CONTACT DYNAMICS
+      ====================================================== -->
+
+      <div class="project-item">
+
+        <p class="project-meta">
+          Interactive and Networked Robotics Laboratory ·
+          Seoul National University
+        </p>
+
+        <h3>
+          Contact Dynamics Simulation with Cascaded
+          Newton-Augmented Lagrangian Methods
+        </h3>
+
+        <p>
+          Developed a MATLAB simulator for rigid-body contact dynamics using
+          cascaded Newton and augmented-Lagrangian numerical methods.
+          The project investigated numerical formulations for resolving
+          unilateral contact constraints and provided a simulation testbed
+          for studying physically grounded robot dynamics and control.
+        </p>
+
+        <div class="research-tags">
+          <span>Contact Dynamics</span>
+          <span>Numerical Optimization</span>
+          <span>Robot Dynamics</span>
+          <span>MATLAB</span>
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================================
+           CIRCA
+      ====================================================== -->
+
+      <div class="project-item">
+
+        <p class="project-meta">
+          SNU Mechatronics Design
+        </p>
+
+        <h3>
+          Circa — Noninvasive Sleep Monitoring and
+          Environment-Adaptive IoT Hub
+        </h3>
+
+        <p>
+          Developed a contactless sleep-monitoring system using an
+          8 × 8 time-of-flight LiDAR array and multimodal environmental
+          sensors. The system combined noninvasive bedside sensing with
+          environment-aware IoT functionality for monitoring sleep and
+          surrounding conditions.
+        </p>
+
+        <p class="project-award">
+          1st Place · SNU Mechatronics Design Competition
+        </p>
+
+        <div class="research-tags">
+          <span>Mechatronics</span>
+          <span>ToF LiDAR</span>
+          <span>Embedded Systems</span>
+          <span>IoT</span>
+        </div>
+
+      </div>
 
     </section>
 
@@ -237,15 +387,19 @@
       <div class="education">
 
         <div>
-          <h3>Seoul National University</h3>
+
+          <h3>
+            Seoul National University
+          </h3>
 
           <p>
-            B.S. in Mechanical Engineering
+            B.S. Candidate in Mechanical Engineering
           </p>
 
           <p class="muted">
-            Double Major in Computer Science
+            B.S. Candidate in Computer Science and Engineering
           </p>
+
         </div>
 
         <p class="education-location">
@@ -269,12 +423,22 @@
       </p>
 
       <div class="footer-links">
-        <a href="mailto:YOUR_EMAIL@snu.ac.kr">Email</a>
-        <a href="https://github.com/hryu02-hub" target="_blank">GitHub</a>
+
+        <a href="mailto:hansol02ryu@snu.ac.kr">
+          Email
+        </a>
+
+        <a
+          href="https://github.com/hryu02-hub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
       </div>
 
     </footer>
-
 
   </main>
 
