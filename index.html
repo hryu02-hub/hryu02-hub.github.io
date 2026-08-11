@@ -12,8 +12,8 @@
     content="Hansol Ryu - Undergraduate researcher in robot learning at Seoul National University."
   >
 
-  <!-- Change version number when CSS is updated to avoid browser cache -->
-  <link rel="stylesheet" href="style.css?v=4">
+  <!-- Increase version number when CSS is updated -->
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 
 
@@ -40,7 +40,12 @@
         </p>
 
         <div class="hero-links">
-          <a href="Hansol_Ryu_CV.pdf" target="_blank">
+
+          <a
+            href="Hansol_Ryu_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV
           </a>
 
@@ -55,6 +60,7 @@
           <a href="mailto:hansol02ryu@snu.ac.kr">
             Email
           </a>
+
         </div>
 
 
@@ -104,20 +110,13 @@
       </div>
 
 
-      <!-- Profile photo can replace this later -->
-      <div class="profile-placeholder">
-        <span>HR</span>
-      </div>
-
-      <!--
-      To use a profile photo later, replace the block above with:
+      <!-- Profile Photo -->
 
       <img
         class="profile-photo"
         src="assets/profile.jpg"
         alt="Hansol Ryu"
       >
-      -->
 
     </section>
 
@@ -138,13 +137,13 @@
 
       <article class="research-item">
 
-        <!-- Replace this placeholder with a research image later -->
+        <!-- Temporary placeholder until a research image is added -->
         <div class="research-visual robot-learning">
           <span>Robot Learning</span>
         </div>
 
         <!--
-        Later, replace the block above with:
+        Later, replace the placeholder above with:
 
         <img
           class="research-image"
@@ -212,7 +211,7 @@
         <img
           class="research-image perception-full"
           src="assets/perception.jpg"
-          alt="VLM-guided active perception for robotic manipulation"
+          alt="Perception and spatial reasoning for post-grasp retrieval in clutter"
         >
 
 
@@ -232,29 +231,29 @@
           <h3>
             Perception and Spatial Reasoning for Post-Grasp Retrieval in Clutter
           </h3>
-          
+
           <p>
-            I worked on perception and spatial reasoning for post-grasp retrieval
-            in cluttered tabletop scenes, where a robot must extract a target object
-            while minimizing disturbance to surrounding objects.
+            I worked on perception and spatial reasoning for post-grasp
+            retrieval in cluttered tabletop scenes, where a robot must extract
+            a target object while minimizing disturbance to surrounding
+            objects.
           </p>
-          
+
           <p class="research-detail">
             My work included implementing and evaluating a TSDF-based active
-            perception baseline, exploring TSDF and 3D Gaussian Splatting for 3D
-            scene representation, developing a VLM-based pipeline for reasoning
-            about retrieval directions from visual observations, and building the
-            real-robot evaluation pipeline and quantitative metrics for measuring
-            clutter disturbance.
+            perception baseline, exploring TSDF and 3D Gaussian Splatting for
+            3D scene representation, developing a VLM-based pipeline for
+            reasoning about retrieval directions from visual observations,
+            and building the real-robot evaluation pipeline and quantitative
+            metrics for measuring clutter disturbance.
           </p>
-          
+
           <div class="research-tags">
             <span>Robot Perception</span>
             <span>Active Perception</span>
             <span>Vision-Language Models</span>
             <span>3D Representation</span>
           </div>
-
 
         </div>
 
@@ -322,7 +321,7 @@
 
         <p>
           Developed a MATLAB simulator for rigid-body contact dynamics using
-          cascaded Newton based augmented-Lagrangian numerical methods.
+          cascaded Newton-based augmented-Lagrangian numerical methods.
           The project investigated numerical formulations for resolving
           unilateral contact constraints and provided a simulation testbed
           for studying physically grounded robot dynamics and control.
