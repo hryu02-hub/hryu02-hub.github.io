@@ -1,149 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Hansol Ryu</title>
+
   <meta
     name="description"
-    content="Hansol Ryu - Undergraduate researcher in robot learning at Seoul National University."
+    content="Hansol Ryu - Undergraduate researcher interested in robot learning, reinforcement learning, control, dynamics, and computer vision."
   >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
   <main class="container">
 
-    <!-- Header -->
-    <header class="header">
-      <div>
-        <h1>Hansol Ryu</h1>
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
 
-        <p class="affiliation">
-          Mechanical Engineering & Computer Science<br>
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <p class="eyebrow">
           Seoul National University
         </p>
+
+        <h1>Hansol Ryu</h1>
+
+        <p class="subtitle">
+          Mechanical Engineering & Computer Science
+        </p>
+
+        <div class="hero-links">
+          <a href="files/Hansol_Ryu_CV.pdf" target="_blank">CV</a>
+          <a href="https://github.com/hryu02-hub" target="_blank">GitHub</a>
+          <a href="mailto:YOUR_EMAIL@snu.ac.kr">Email</a>
+        </div>
+
+
+        <div class="bio">
+
+          <p>
+            I am a senior undergraduate student in Mechanical Engineering and
+            Computer Science at Seoul National University. I am currently
+            conducting my B.S. thesis research in the
+            <strong>Robotics Laboratory</strong> with
+            <strong>Prof. Frank C. Park</strong>. Previously, I worked on robot
+            perception for tabletop cluttered scenes in the
+            <strong>RPM Robotics Lab</strong> with
+            <strong>Prof. Ayoung Kim</strong>.
+          </p>
+
+          <p>
+            I am interested in <strong>robot learning</strong>, particularly in
+            developing scalable and data-efficient methods for learning complex
+            robotic behaviors. I am especially interested in leveraging
+            structural and physical inductive biases, including insights from
+            control and dynamics, to improve how robots learn and physically
+            interact with their environments. My interests also extend to deep
+            reinforcement learning and computer vision for increasingly
+            dexterous and general robotic systems.
+          </p>
+
+        </div>
+
       </div>
 
-      <nav class="links">
-        <a href="files/Hansol_Ryu_CV.pdf" target="_blank">CV</a>
-        <a href="https://github.com/hryu02-hub" target="_blank">GitHub</a>
-        <a href="mailto:YOUR_EMAIL@snu.ac.kr">Email</a>
-      </nav>
-    </header>
 
+      <!-- Replace this div with an image later -->
+      <div class="profile-placeholder">
+        <span>HR</span>
+      </div>
 
-    <!-- About -->
-    <section>
-      <h2>About</h2>
+      <!--
+      Later, replace the placeholder above with:
 
-      <p>
-        I am interested in <strong>robot learning</strong>, particularly in
-        developing scalable and data-efficient methods for learning complex
-        robotic behaviors. I am especially interested in leveraging structural
-        and physical inductive biases, including insights from control and
-        dynamics, to improve how robots learn and physically interact with
-        their environments. My interests also extend to deep reinforcement
-        learning and computer vision for increasingly dexterous and general
-        robotic systems.
-      </p>
+      <img
+        class="profile-photo"
+        src="assets/profile.jpg"
+        alt="Hansol Ryu"
+      >
+      -->
+
     </section>
 
 
-    <!-- Research -->
-    <section>
+
+    <!-- =========================================================
+         SELECTED RESEARCH
+    ========================================================== -->
+
+    <section class="section">
+
       <h2>Selected Research</h2>
 
-      <div class="project">
-        <div class="project-text">
+
+      <!-- Research 1 -->
+      <article class="research-item">
+
+        <div class="research-visual robot-learning">
+          <span>Robot Learning</span>
+        </div>
+
+        <!--
+        Later replace the div above with:
+
+        <img
+          class="research-image"
+          src="assets/robot-learning.jpg"
+          alt="Visuomotor robot learning research"
+        >
+        -->
+
+
+        <div class="research-content">
+
+          <p class="research-lab">
+            Robotics Laboratory · Seoul National University
+          </p>
+
           <h3>Visuomotor Robot Learning</h3>
 
-          <p class="project-meta">
-            Robot Learning · Manipulation · Geometric Representations
+          <p>
+            Studying visuomotor policies and geometric representations for
+            robotic manipulation, with an emphasis on leveraging structure
+            from robot geometry, dynamics, and physical interaction.
           </p>
+
+          <div class="research-tags">
+            <span>Robot Learning</span>
+            <span>Manipulation</span>
+            <span>Geometric Learning</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- Research 2 -->
+      <article class="research-item">
+
+        <div class="research-visual perception">
+          <span>Robot Perception</span>
+        </div>
+
+        <!--
+        Later replace the div above with:
+
+        <img
+          class="research-image"
+          src="assets/robot-perception.jpg"
+          alt="Robot perception research"
+        >
+        -->
+
+
+        <div class="research-content">
+
+          <p class="research-lab">
+            RPM Robotics Lab · Seoul National University
+          </p>
+
+          <h3>Robot Perception in Cluttered Scenes</h3>
 
           <p>
-            Exploring visuomotor policies and geometric representations for
-            robotic manipulation, with a current focus on learning robust
-            behaviors under physical interaction and contact uncertainty.
+            Worked on perception for tabletop cluttered environments,
+            including 3D scene representations, active perception,
+            viewpoint selection, and real-robot evaluation.
           </p>
+
+          <div class="research-tags">
+            <span>Computer Vision</span>
+            <span>3D Perception</span>
+            <span>Active Perception</span>
+          </div>
+
         </div>
-      </div>
 
-
-      <div class="project">
-        <div class="project-text">
-          <h3>Active Perception and 3D Representation</h3>
-
-          <p class="project-meta">
-            Computer Vision · Active Perception · 3D Geometry
-          </p>
-
-          <p>
-            Worked on perception pipelines involving 3D scene representation
-            and viewpoint selection for robotic systems, including experimental
-            evaluation with real robots.
-          </p>
-        </div>
-      </div>
-
-
-      <div class="project">
-        <div class="project-text">
-          <h3>Circa</h3>
-
-          <p class="project-meta">
-            Mechatronics · Embedded Systems · Sensing
-          </p>
-
-          <p>
-            Developed a contactless sleep-monitoring system using a ToF sensor
-            array and environmental sensors as part of a mechatronics design
-            project.
-          </p>
-        </div>
-      </div>
+      </article>
 
     </section>
 
 
-    <!-- Education -->
-    <section>
+
+    <!-- =========================================================
+         PUBLICATIONS
+    ========================================================== -->
+
+    <section class="section">
+
+      <h2>Publications</h2>
+
+      <p class="muted">
+        Publications and research manuscripts will be listed here.
+      </p>
+
+      <!--
+      Example:
+
+      <div class="publication">
+        <p class="publication-title">
+          Paper Title
+        </p>
+
+        <p class="publication-authors">
+          Author A, Hansol Ryu, Author B
+        </p>
+
+        <p class="publication-venue">
+          IEEE Robotics and Automation Letters, 2026
+        </p>
+      </div>
+      -->
+
+    </section>
+
+
+
+    <!-- =========================================================
+         EDUCATION
+    ========================================================== -->
+
+    <section class="section">
+
       <h2>Education</h2>
 
       <div class="education">
+
         <div>
           <h3>Seoul National University</h3>
-          <p>B.S. in Mechanical Engineering</p>
-          <p>Double Major in Computer Science</p>
+
+          <p>
+            B.S. in Mechanical Engineering
+          </p>
+
+          <p class="muted">
+            Double Major in Computer Science
+          </p>
         </div>
 
-        <div class="date">
+        <p class="education-location">
           Seoul, Korea
-        </div>
+        </p>
+
       </div>
+
     </section>
 
 
-    <!-- Contact -->
-    <section>
-      <h2>Contact</h2>
 
-      <p>
-        Feel free to reach out via
-        <a href="mailto:YOUR_EMAIL@snu.ac.kr">email</a>.
-      </p>
-    </section>
-
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
 
     <footer>
-      <p>© 2026 Hansol Ryu</p>
+
+      <p>
+        © 2026 Hansol Ryu
+      </p>
+
+      <div class="footer-links">
+        <a href="mailto:YOUR_EMAIL@snu.ac.kr">Email</a>
+        <a href="https://github.com/hryu02-hub" target="_blank">GitHub</a>
+      </div>
+
     </footer>
+
 
   </main>
 
 </body>
+
 </html>
