@@ -661,3 +661,238 @@ footer {
   }
 
 }
+
+/* =========================================================
+   PROJECT PAGE
+========================================================= */
+
+.project-page {
+  max-width: 860px;
+}
+
+
+/* Navigation */
+
+.project-nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 90px;
+
+  font-size: 0.9rem;
+}
+
+.project-nav > a {
+  font-weight: 600;
+}
+
+.project-nav-links {
+  display: flex;
+
+  gap: 18px;
+}
+
+
+/* Hero */
+
+.project-hero {
+  max-width: 760px;
+
+  margin-bottom: 90px;
+}
+
+.project-kicker {
+  margin: 0 0 14px;
+
+  color: #7c8288;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-title {
+  margin: 0;
+
+  color: #18191b;
+
+  font-size: clamp(2.4rem, 6vw, 3.7rem);
+  line-height: 1.08;
+
+  font-weight: 720;
+
+  letter-spacing: -0.045em;
+}
+
+.project-subtitle {
+  max-width: 680px;
+
+  margin: 22px 0 0;
+
+  color: #565c62;
+
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.project-tags {
+  margin-top: 28px;
+}
+
+
+/* Sections */
+
+.project-section {
+  max-width: 760px;
+
+  margin-bottom: 80px;
+}
+
+.project-section h2 {
+  margin-bottom: 22px;
+}
+
+.project-section > p {
+  margin: 0 0 16px;
+
+  color: #3e4348;
+}
+
+.project-section > p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* Implementation blocks */
+
+.project-points {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.project-point {
+  padding: 22px 23px;
+
+  border: 1px solid #e8eaed;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.project-point h3 {
+  margin: 0 0 8px;
+
+  color: #26292c;
+
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.project-point p {
+  margin: 0;
+
+  color: #5d6267;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* Solver flow */
+
+.solver-flow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  overflow-x: auto;
+
+  padding: 8px 0;
+}
+
+.solver-step {
+  flex: 0 0 auto;
+
+  padding: 10px 14px;
+
+  border-radius: 7px;
+
+  background: #f1f3f5;
+
+  color: #4c5257;
+
+  font-size: 0.8rem;
+  font-weight: 550;
+
+  white-space: nowrap;
+}
+
+.solver-arrow {
+  flex: 0 0 auto;
+
+  color: #a1a6ab;
+}
+
+
+/* Reference */
+
+.project-reference {
+  padding-top: 8px;
+}
+
+.project-reference em {
+  color: #44494e;
+}
+
+.project-link {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .project-nav {
+    margin-bottom: 60px;
+  }
+
+  .project-hero {
+    margin-bottom: 70px;
+  }
+
+  .project-title {
+    font-size: 2.45rem;
+  }
+
+  .project-subtitle {
+    font-size: 1.02rem;
+  }
+
+  .project-section {
+    margin-bottom: 65px;
+  }
+
+  .project-points {
+    grid-template-columns: 1fr;
+  }
+
+}
