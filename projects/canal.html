@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CANAL MATLAB Reimplementation | Hansol Ryu</title>
+
+  <meta
+    name="description"
+    content="MATLAB reimplementation of the Cascaded Newton-based Augmented Lagrangian (CANAL) contact solver."
+  >
+
+  <link rel="stylesheet" href="../style.css?v=6">
+</head>
+
+
+<body>
+
+  <main class="container project-page">
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+
+    <nav class="project-nav">
+
+      <a href="../index.html">
+        ← Hansol Ryu
+      </a>
+
+      <div class="project-nav-links">
+        <a href="../Hansol_Ryu_CV.pdf" target="_blank">
+          CV
+        </a>
+
+        <a
+          href="https://github.com/hryu02-hub"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+      </div>
+
+    </nav>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <header class="project-hero">
+
+      <p class="project-kicker">
+        Contact Dynamics · Numerical Simulation
+      </p>
+
+      <h1 class="project-title">
+        MATLAB Reimplementation of CANAL
+      </h1>
+
+      <p class="project-subtitle">
+        Cascaded Newton-based Augmented Lagrangian
+        for rigid-body contact simulation
+      </p>
+
+      <div class="research-tags project-tags">
+        <span>Contact Dynamics</span>
+        <span>Numerical Optimization</span>
+        <span>Augmented Lagrangian</span>
+        <span>MATLAB</span>
+      </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         OVERVIEW
+    ========================================================== -->
+
+    <section class="project-section">
+
+      <h2>Overview</h2>
+
+      <p>
+        As part of my research experience in the
+        Interactive and Networked Robotics Laboratory at Seoul National
+        University, I studied numerical methods for rigid-body contact
+        dynamics and implemented a MATLAB version of the
+        <strong>Cascaded Newton-based Augmented Lagrangian (CANAL)</strong>
+        contact solver.
+      </p>
+
+      <p>
+        The goal of the project was to understand the numerical structure
+        behind modern multi-contact simulation by reproducing the core
+        solver pipeline and validating it on simplified rigid-contact
+        scenarios.
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         METHOD
+    ========================================================== -->
+
+    <section class="project-section">
+
+      <h2>What I Implemented</h2>
+
+      <div class="project-points">
+
+        <div class="project-point">
+
+          <h3>Contact Dynamics Formulation</h3>
+
+          <p>
+            Implemented discrete rigid-body dynamics with unilateral
+            contact constraints and frictional contact variables.
+          </p>
+
+        </div>
+
+
+        <div class="project-point">
+
+          <h3>Augmented-Lagrangian Iteration</h3>
+
+          <p>
+            Implemented the outer augmented-Lagrangian updates used to
+            iteratively enforce consistency between system dynamics and
+            contact constraints.
+          </p>
+
+        </div>
+
+
+        <div class="project-point">
+
+          <h3>Cascaded Newton Solver</h3>
+
+          <p>
+            Reproduced the cascaded Newton structure used by CANAL,
+            including Newton updates for the inner surrogate problem and
+            line-search-based step selection.
+          </p>
+
+        </div>
+
+
+        <div class="project-point">
+
+          <h3>Simulation Validation</h3>
+
+          <p>
+            Built MATLAB simulation cases to examine contact behavior,
+            solver convergence, and the numerical interaction between
+            rigid-body dynamics and contact impulses.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         PIPELINE
+    ========================================================== -->
+
+    <section class="project-section">
+
+      <h2>Solver Structure</h2>
+
+      <div class="solver-flow">
+
+        <div class="solver-step">
+          Rigid-body state
+        </div>
+
+        <div class="solver-arrow">
+          →
+        </div>
+
+        <div class="solver-step">
+          Contact constraints
+        </div>
+
+        <div class="solver-arrow">
+          →
+        </div>
+
+        <div class="solver-step">
+          Cascaded Newton solve
+        </div>
+
+        <div class="solver-arrow">
+          →
+        </div>
+
+        <div class="solver-step">
+          AL update
+        </div>
+
+        <div class="solver-arrow">
+          →
+        </div>
+
+        <div class="solver-step">
+          State integration
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         OUTCOME
+    ========================================================== -->
+
+    <section class="project-section">
+
+      <h2>Outcome</h2>
+
+      <p>
+        This project gave me hands-on experience with nonlinear contact
+        dynamics, complementarity-based modeling, augmented-Lagrangian
+        optimization, Newton methods, and the practical numerical issues
+        involved in implementing a physics simulator from mathematical
+        formulations.
+      </p>
+
+      <p>
+        The implementation served primarily as a technical reproduction
+        and learning project rather than a new contact-solver contribution.
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         REFERENCE
+    ========================================================== -->
+
+    <section class="project-section project-reference">
+
+      <h2>Reference</h2>
+
+      <p>
+        J. Lee, M. Lee, S. Park, J. Yun, and D. Lee,
+        <em>
+          “Variations of Augmented Lagrangian for Robotic
+          Multi-Contact Simulation.”
+        </em>
+      </p>
+
+      <a
+        class="project-link"
+        href="https://arxiv.org/abs/2502.16898"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Reference Paper →
+      </a>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+      <p>
+        © 2026 Hansol Ryu
+      </p>
+
+      <a href="../index.html">
+        Back to home ↑
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+
+</html>
