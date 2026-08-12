@@ -864,6 +864,10 @@ footer {
   font-weight: 600;
 }
 
+.project-item .project-link {
+  margin-top: 18px;
+}
+
 
 /* =========================================================
    PROJECT PAGE — MOBILE
