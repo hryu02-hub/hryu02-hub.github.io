@@ -963,4 +963,202 @@ footer {
     grid-template-columns: 1fr;
   }
 
+}/* =========================================================
+   CIRCA PROJECT PAGE
+========================================================= */
+
+.circa-award {
+  display: inline-block;
+
+  margin: 26px 0 0;
+
+  padding: 7px 12px;
+
+  border-radius: 7px;
+
+  background: #f3f1ff;
+  color: #5d50a8;
+
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   CIRCA HERO IMAGE
+========================================================= */
+
+.circa-hero-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CIRCA SYSTEM FLOW
+========================================================= */
+
+.circa-flow {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 12px;
+
+  overflow-x: auto;
+}
+
+.circa-flow-group {
+  min-width: 145px;
+}
+
+.circa-flow-label {
+  margin: 0 0 9px;
+
+  color: #858a8f;
+
+  font-size: 0.76rem;
+  font-weight: 650;
+
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.circa-flow-box {
+  margin-bottom: 7px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e7e9ec;
+  border-radius: 7px;
+
+  background: #fafbfc;
+
+  color: #4d5257;
+
+  font-size: 0.78rem;
+  font-weight: 550;
+
+  text-align: center;
+}
+
+.circa-flow-box:last-child {
+  margin-bottom: 0;
+}
+
+.circa-flow-arrow {
+  color: #a2a7ac;
+
+  font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   CIRCA SIGNAL FLOW
+========================================================= */
+
+.circa-signal-flow {
+  margin-top: 4px;
+}
+
+.circa-section-note {
+  margin-top: 18px !important;
+
+  color: #686e74 !important;
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CIRCA IoT
+========================================================= */
+
+.circa-iot-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+.circa-iot-item {
+  padding: 20px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.circa-iot-icon {
+  display: inline-block;
+
+  margin-bottom: 19px;
+
+  color: #8273d3;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.circa-iot-item h3 {
+  margin: 0 0 7px;
+
+  color: #282b2e;
+
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.circa-iot-item p {
+  margin: 0;
+
+  color: #62676c;
+
+  font-size: 0.87rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CIRCA MOBILE
+========================================================= */
+
+@media (max-width: 720px) {
+
+  .circa-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .circa-flow-arrow {
+    transform: rotate(90deg);
+
+    text-align: center;
+  }
+
+  .circa-iot-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
