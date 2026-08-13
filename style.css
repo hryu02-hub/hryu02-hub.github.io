@@ -865,7 +865,71 @@ footer {
 }
 
 .project-item .project-link {
+  display: inline-block;
   margin-top: 18px;
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.project-video-wrap {
+  margin-top: 6px;
+}
+
+.project-video {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+
+  border-radius: 10px;
+  background: #000000;
+}
+
+.project-caption {
+  margin-top: 10px !important;
+
+  color: #6a7076 !important;
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   EQUATIONS
+========================================================= */
+
+.equation-block {
+  margin-bottom: 34px;
+}
+
+.equation-block:last-child {
+  margin-bottom: 0;
+}
+
+.equation-title {
+  margin: 0 0 10px;
+
+  color: #25282c;
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.equation {
+  margin: 0 0 14px;
+  padding: 18px 20px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 10px;
+
+  background: #fafbfc;
+
+  overflow-x: auto;
+}
+
+.equation-block p:not(.equation-title) {
+  margin: 0;
+  color: #565c62;
 }
 
 
