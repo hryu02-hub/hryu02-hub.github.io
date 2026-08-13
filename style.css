@@ -932,6 +932,71 @@ footer {
   color: #565c62;
 }
 
+/* =========================================================
+   NOTATION
+========================================================= */
+
+.notation-box {
+  margin: 0 0 42px;
+
+  padding: 22px 24px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.notation-title {
+  margin: 0 0 18px;
+
+  color: #303438;
+
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.notation-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 11px 28px;
+}
+
+.notation-grid > div {
+  display: grid;
+
+  grid-template-columns: 72px 1fr;
+
+  gap: 8px;
+
+  align-items: baseline;
+
+  color: #5a6066;
+
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.notation-symbol {
+  color: #292d31;
+
+  font-weight: 600;
+}
+
+
+/* Mobile */
+
+@media (max-width: 620px) {
+
+  .notation-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
 
 /* =========================================================
    PROJECT PAGE — MOBILE
