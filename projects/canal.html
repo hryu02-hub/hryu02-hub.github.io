@@ -167,7 +167,92 @@
     <!-- =========================================================
          KEY FORMULATION
     ========================================================== -->
-
+    <div class="notation-box">
+    
+      <p class="notation-title">
+        Notation
+      </p>
+    
+      <div class="notation-grid">
+    
+        <div>
+          <span class="notation-symbol">\( \hat{v} \)</span>
+          <span>representative generalized velocity for the current simulation step</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( \lambda \)</span>
+          <span>constraint impulse; for contact, it contains normal and tangential impulses</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( J \)</span>
+          <span>constraint Jacobian mapping generalized velocity to constraint-space velocity</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( i \)</span>
+          <span>index of the \(i\)-th constraint or contact</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( k \)</span>
+          <span>simulation time-step index</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( t_k \)</span>
+          <span>integration time step</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( \lambda_{i,n} \)</span>
+          <span>normal contact impulse at contact \(i\)</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( \lambda_{i,t} \)</span>
+          <span>tangential friction impulse at contact \(i\)</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( \mu_i \)</span>
+          <span>Coulomb friction coefficient at contact \(i\)</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( \delta_i \)</span>
+          <span>auxiliary variable associated with slip and the friction-cone boundary</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( e_i \)</span>
+          <span>constraint error / stabilization bias used in the velocity-level constraint</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( A,\; b \)</span>
+          <span>matrix and vector collecting the discretized rigid-body dynamics</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( z \)</span>
+          <span>slack variable representing the constraint-space velocity interface</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( u \)</span>
+          <span>augmented-Lagrangian multiplier</span>
+        </div>
+    
+        <div>
+          <span class="notation-symbol">\( \beta \)</span>
+          <span>augmented-Lagrangian penalty parameter</span>
+        </div>
+    
+      </div>
+    
+    </div>
     <section class="project-section">
 
       <h2>Key Formulation</h2>
