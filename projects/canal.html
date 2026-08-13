@@ -12,13 +12,30 @@
     content="MATLAB reimplementation of the Cascaded Newton-based Augmented Lagrangian (CANAL) contact solver."
   >
 
-  <link rel="stylesheet" href="../style.css?v=6">
+  <!-- Shared website stylesheet -->
+  <link rel="stylesheet" href="../style.css?v=7">
+
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\\[', '\\]'], ['$$', '$$']]
+      }
+    };
+  </script>
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
 </head>
 
 
 <body>
 
   <main class="container project-page">
+
 
     <!-- =========================================================
          NAVIGATION
@@ -31,7 +48,12 @@
       </a>
 
       <div class="project-nav-links">
-        <a href="../Hansol_Ryu_CV.pdf" target="_blank">
+
+        <a
+          href="../Hansol_Ryu_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           CV
         </a>
 
@@ -42,6 +64,7 @@
         >
           GitHub
         </a>
+
       </div>
 
     </nav>
@@ -79,6 +102,41 @@
 
 
     <!-- =========================================================
+         DEMO
+    ========================================================== -->
+
+    <section class="project-section">
+
+      <h2>Demo</h2>
+
+      <div class="project-video-wrap">
+
+        <video
+          class="project-video"
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="../assets/canal/demo.mp4"
+            type="video/mp4"
+          >
+
+          Your browser does not support the video tag.
+        </video>
+
+      </div>
+
+      <p class="project-caption">
+        Example rigid-contact simulation from my MATLAB
+        reimplementation of the CANAL solver.
+      </p>
+
+    </section>
+
+
+
+    <!-- =========================================================
          OVERVIEW
     ========================================================== -->
 
@@ -88,7 +146,7 @@
 
       <p>
         As part of my research experience in the
-        Interactive & Networked Robotics Laboratory (INRoL, Prof. Dongjun Lee) at Seoul National
+        Interactive and Networked Robotics Laboratory at Seoul National
         University, I studied numerical methods for rigid-body contact
         dynamics and implemented a MATLAB version of the
         <strong>Cascaded Newton-based Augmented Lagrangian (CANAL)</strong>
@@ -96,10 +154,10 @@
       </p>
 
       <p>
-        The goal of the project was to understand the numerical structure
-        behind modern multi-contact simulation by reproducing the core
-        solver pipeline and validating it on simplified rigid-contact
-        scenarios.
+        The project focused on understanding the numerical structure
+        of complementarity-based rigid-contact simulation by reproducing
+        the core solver pipeline and validating it on simplified
+        rigid-body contact scenarios.
       </p>
 
     </section>
@@ -107,7 +165,212 @@
 
 
     <!-- =========================================================
-         METHOD
+         KEY FORMULATION
+    ========================================================== -->
+
+    <section class="project-section">
+
+      <h2>Key Formulation</h2>
+
+
+      <!-- -------------------------------------------------------
+           NCP
+      -------------------------------------------------------- -->
+
+      <div class="equation-block">
+
+        <p class="equation-title">
+          Signorini–Coulomb Contact NCP
+        </p>
+
+        <div class="equation">
+
+          \[
+          0 \leq \lambda_{i,n}
+          \;\perp\;
+          J_{i,n}\hat{v} + e_{i,n}
+          \geq 0
+          \]
+
+          \[
+          0 \leq \delta_i
+          \;\perp\;
+          \mu_i \lambda_{i,n}
+          -
+          \left\|\lambda_{i,t}\right\|
+          \geq 0
+          \]
+
+          \[
+          \delta_i \lambda_{i,t}
+          +
+          \mu_i \lambda_{i,n}
+          J_{i,t}\hat{v}
+          = 0
+          \]
+
+        </div>
+
+        <p>
+          Rigid frictional contact is modeled as a nonlinear
+          complementarity problem (NCP). The normal condition enforces
+          unilateral contact, while the tangential conditions capture
+          sticking and Coulomb frictional sliding.
+        </p>
+
+      </div>
+
+
+
+      <!-- -------------------------------------------------------
+           MULTI-CONTACT DYNAMICS
+      -------------------------------------------------------- -->
+
+      <div class="equation-block">
+
+        <p class="equation-title">
+          Multi-Contact Dynamics
+        </p>
+
+        <div class="equation">
+
+          \[
+          \text{Solve}
+          \qquad
+          A\hat{v}
+          =
+          b + J^{T}\lambda
+          \]
+
+          \[
+          \text{subject to}
+          \qquad
+          (J\hat{v},\lambda)
+          \in S_c
+          \]
+
+        </div>
+
+        <p>
+          Each simulation step couples the discretized rigid-body
+          dynamics with the nonlinear contact constraints represented
+          by the set \(S_c\).
+        </p>
+
+      </div>
+
+
+
+      <!-- -------------------------------------------------------
+           SLACK VARIABLE
+      -------------------------------------------------------- -->
+
+      <div class="equation-block">
+
+        <p class="equation-title">
+          Slack-Variable Formulation
+        </p>
+
+        <div class="equation">
+
+          \[
+          A\hat{v}
+          =
+          b + J^{T}\lambda,
+          \qquad
+          (z,\lambda)\in S_c,
+          \qquad
+          J\hat{v}=z
+          \]
+
+        </div>
+
+        <p>
+          CANAL introduces the slack variable \(z\) to separate the
+          dynamics from the contact interface. This enables the contact
+          problem to be treated within an augmented-Lagrangian
+          framework.
+        </p>
+
+      </div>
+
+
+
+      <!-- -------------------------------------------------------
+           AL UPDATE
+      -------------------------------------------------------- -->
+
+      <div class="equation-block">
+
+        <p class="equation-title">
+          Augmented-Lagrangian Update
+        </p>
+
+        <div class="equation">
+
+          \[
+          u
+          \leftarrow
+          u + \beta
+          \left(
+          J\hat{v}-z
+          \right)
+          \]
+
+        </div>
+
+        <p>
+          The outer augmented-Lagrangian iteration updates the
+          multiplier \(u\) according to the mismatch between the
+          physical constraint velocity \(J\hat{v}\) and the slack
+          variable \(z\).
+        </p>
+
+      </div>
+
+
+
+      <!-- -------------------------------------------------------
+           CANAL RESIDUAL
+      -------------------------------------------------------- -->
+
+      <div class="equation-block">
+
+        <p class="equation-title">
+          Cascaded Newton Inner Solve
+        </p>
+
+        <div class="equation">
+
+          \[
+          r(\hat{v})
+          =
+          A\hat{v}
+          -
+          b
+          -
+          \sum_i
+          J_i^{T}\lambda_i
+          \]
+
+        </div>
+
+        <p>
+          Within each augmented-Lagrangian iteration, CANAL solves
+          a convexified surrogate contact problem using a Newton-based
+          procedure. The cascaded construction avoids directly applying
+          a standard semismooth Newton solver to the original
+          non-convex contact residual.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         WHAT I IMPLEMENTED
     ========================================================== -->
 
     <section class="project-section">
@@ -116,52 +379,96 @@
 
       <div class="project-points">
 
+
         <div class="project-point">
 
-          <h3>Contact Dynamics Formulation</h3>
+          <h3>
+            Contact Dynamics Formulation
+          </h3>
 
           <p>
-            Implemented discrete rigid-body dynamics with unilateral
-            contact constraints and frictional contact variables.
+            Implemented discretized rigid-body dynamics together with
+            unilateral and frictional contact constraints in MATLAB.
           </p>
 
         </div>
 
 
+
         <div class="project-point">
 
-          <h3>Augmented-Lagrangian Iteration</h3>
+          <h3>
+            Contact Projection
+          </h3>
 
           <p>
-            Implemented the outer augmented-Lagrangian updates used to
-            iteratively enforce consistency between system dynamics and
+            Implemented contact impulse updates and friction-cone
+            operations required to distinguish open, sticking, and
+            sliding contact states.
+          </p>
+
+        </div>
+
+
+
+        <div class="project-point">
+
+          <h3>
+            Augmented-Lagrangian Iteration
+          </h3>
+
+          <p>
+            Implemented the outer primal-dual iteration that gradually
+            enforces consistency between system dynamics and the
             contact constraints.
           </p>
 
         </div>
 
 
+
         <div class="project-point">
 
-          <h3>Cascaded Newton Solver</h3>
+          <h3>
+            Cascaded Newton Solver
+          </h3>
 
           <p>
-            Reproduced the cascaded Newton structure used by CANAL,
-            including Newton updates for the inner surrogate problem and
+            Reproduced the cascaded Newton structure used to solve
+            the inner surrogate problem, including Newton updates and
             line-search-based step selection.
           </p>
 
         </div>
 
 
+
         <div class="project-point">
 
-          <h3>Simulation Validation</h3>
+          <h3>
+            Simulation Pipeline
+          </h3>
 
           <p>
-            Built MATLAB simulation cases to examine contact behavior,
-            solver convergence, and the numerical interaction between
-            rigid-body dynamics and contact impulses.
+            Built the simulation loop from contact detection and
+            constraint construction through solver execution and
+            rigid-body state integration.
+          </p>
+
+        </div>
+
+
+
+        <div class="project-point">
+
+          <h3>
+            Numerical Validation
+          </h3>
+
+          <p>
+            Tested the implementation on simplified rigid-contact
+            scenarios to examine convergence, contact forces, and
+            resulting object motion.
           </p>
 
         </div>
@@ -173,7 +480,7 @@
 
 
     <!-- =========================================================
-         PIPELINE
+         SOLVER STRUCTURE
     ========================================================== -->
 
     <section class="project-section">
@@ -191,7 +498,15 @@
         </div>
 
         <div class="solver-step">
-          Contact constraints
+          Contact NCP
+        </div>
+
+        <div class="solver-arrow">
+          →
+        </div>
+
+        <div class="solver-step">
+          Surrogate problem
         </div>
 
         <div class="solver-arrow">
@@ -233,16 +548,18 @@
       <h2>Outcome</h2>
 
       <p>
-        This project gave me hands-on experience with nonlinear contact
-        dynamics, complementarity-based modeling, augmented-Lagrangian
-        optimization, Newton methods, and the practical numerical issues
-        involved in implementing a physics simulator from mathematical
-        formulations.
+        This project gave me hands-on experience translating a
+        mathematical contact model into a working physics simulator.
+        In particular, I gained experience with nonlinear
+        complementarity problems, frictional contact modeling,
+        augmented-Lagrangian optimization, Newton methods, and
+        numerical debugging of rigid-body simulation.
       </p>
 
       <p>
-        The implementation served primarily as a technical reproduction
-        and learning project rather than a new contact-solver contribution.
+        The implementation was a technical reproduction and learning
+        project based on the CANAL formulation rather than a new
+        contact-solver contribution.
       </p>
 
     </section>
@@ -293,6 +610,7 @@
       </a>
 
     </footer>
+
 
   </main>
 
