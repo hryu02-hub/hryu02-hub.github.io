@@ -1226,4 +1226,70 @@ footer {
     grid-template-columns: 1fr;
   }
 
+
+/* =========================================================
+   CIRCA PROJECT PAGE
+========================================================= */
+
+.circa-award {
+  display: inline-block;
+
+  margin: 26px 0 0;
+  padding: 7px 12px;
+
+  border-radius: 7px;
+
+  background: #f3f1ff;
+  color: #5d50a8;
+
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+.circa-hero-image,
+.project-figure {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 12px;
+
+  object-fit: contain;
+}
+
+.project-role {
+  max-width: 760px;
+
+  padding: 22px 24px;
+
+  border: 1px solid #e8eaed;
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.project-role-label {
+  margin: 0 0 10px;
+
+  color: #303438;
+
+  font-size: 0.9rem;
+  font-weight: 650;
+
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.project-role p:last-child {
+  margin: 0;
+
+  color: #555b61;
+}
+
+.project-caption {
+  margin-top: 12px !important;
+
+  color: #6a7076 !important;
+  font-size: 0.9rem;
 }
