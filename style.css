@@ -35,11 +35,13 @@ a {
   color: #245ca6;
   text-decoration: none;
 
-  transition: opacity 0.15s ease;
+  transition:
+    opacity 0.15s ease,
+    color 0.15s ease;
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.72;
 }
 
 strong {
@@ -48,7 +50,7 @@ strong {
 
 
 /* =========================================================
-   LAYOUT
+   MAIN LAYOUT
 ========================================================= */
 
 .container {
@@ -61,7 +63,7 @@ strong {
 
 
 /* =========================================================
-   HERO
+   HOME — HERO
 ========================================================= */
 
 .hero {
@@ -144,19 +146,24 @@ h1 {
 
 .bio a {
   color: inherit;
+
   text-decoration: none;
 }
 
 .bio a:hover {
   color: #245ca6;
+
+  opacity: 1;
 }
 
 
 /* =========================================================
-   PROFILE
+   PROFILE PHOTO
 ========================================================= */
 
 .profile-photo {
+  display: block;
+
   width: 180px;
   height: 180px;
 
@@ -166,8 +173,6 @@ h1 {
 
   object-fit: cover;
   object-position: center;
-
-  display: block;
 }
 
 
@@ -194,7 +199,7 @@ h2 {
 
 
 /* =========================================================
-   RESEARCH
+   HOME — RESEARCH
 ========================================================= */
 
 .research-item {
@@ -216,9 +221,7 @@ h2 {
 }
 
 
-/* =========================================================
-   RESEARCH IMAGE / PLACEHOLDER
-========================================================= */
+/* Research image / placeholder */
 
 .research-visual,
 .research-image {
@@ -289,14 +292,13 @@ h2 {
 }
 
 
-/* Perception image:
-   show the whole image without cropping */
+/* Full-size perception figure */
 
 .perception-full {
-  aspect-ratio: auto;
-
   width: 100%;
   height: auto;
+
+  aspect-ratio: auto;
 
   object-fit: contain;
 
@@ -304,9 +306,7 @@ h2 {
 }
 
 
-/* =========================================================
-   RESEARCH TEXT
-========================================================= */
+/* Research text */
 
 .research-lab {
   margin: 0 0 5px;
@@ -324,6 +324,8 @@ h2 {
 
 .research-lab a:hover {
   color: #245ca6;
+
+  opacity: 1;
 }
 
 .research-content h3 {
@@ -365,6 +367,9 @@ h2 {
   font-size: 0.94rem;
 }
 
+
+/* Tags */
+
 .research-tags {
   display: flex;
 
@@ -388,7 +393,7 @@ h2 {
 
 
 /* =========================================================
-   PUBLICATIONS
+   HOME — PUBLICATIONS
 ========================================================= */
 
 .publication {
@@ -426,7 +431,7 @@ h2 {
 
 
 /* =========================================================
-   PROJECTS
+   HOME — PROJECTS
 ========================================================= */
 
 .project-item {
@@ -471,6 +476,12 @@ h2 {
 
   font-size: 0.9rem;
   font-weight: 550;
+}
+
+.project-item .project-link {
+  display: inline-block;
+
+  margin-top: 18px;
 }
 
 
@@ -541,6 +552,611 @@ footer {
 
 
 /* =========================================================
+   PROJECT PAGE — GENERAL
+========================================================= */
+
+.project-page {
+  max-width: 860px;
+}
+
+
+/* Project navigation */
+
+.project-nav {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 90px;
+
+  font-size: 0.9rem;
+}
+
+.project-nav > a {
+  font-weight: 600;
+}
+
+.project-nav-links {
+  display: flex;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — HERO
+========================================================= */
+
+.project-hero {
+  max-width: 760px;
+
+  margin-bottom: 90px;
+}
+
+.project-kicker {
+  margin: 0 0 14px;
+
+  color: #7c8288;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.project-title {
+  margin: 0;
+
+  color: #18191b;
+
+  font-size: clamp(2.4rem, 6vw, 3.7rem);
+  line-height: 1.08;
+
+  font-weight: 720;
+
+  letter-spacing: -0.045em;
+}
+
+.project-subtitle {
+  max-width: 680px;
+
+  margin: 22px 0 0;
+
+  color: #565c62;
+
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.project-tags {
+  margin-top: 28px;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — SECTIONS
+========================================================= */
+
+.project-section {
+  max-width: 760px;
+
+  margin-bottom: 80px;
+}
+
+.project-section h2 {
+  margin-bottom: 22px;
+}
+
+.project-section > p {
+  margin: 0 0 16px;
+
+  color: #3e4348;
+}
+
+.project-section > p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — IMPLEMENTATION CARDS
+========================================================= */
+
+.project-points {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.project-point {
+  padding: 22px 23px;
+
+  border: 1px solid #e8eaed;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.project-point h3 {
+  margin: 0 0 8px;
+
+  color: #26292c;
+
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.project-point p {
+  margin: 0;
+
+  color: #5d6267;
+
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — FLOW
+========================================================= */
+
+.solver-flow {
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  overflow-x: auto;
+
+  padding: 8px 0;
+}
+
+.solver-step {
+  flex: 0 0 auto;
+
+  padding: 10px 14px;
+
+  border-radius: 7px;
+
+  background: #f1f3f5;
+
+  color: #4c5257;
+
+  font-size: 0.8rem;
+  font-weight: 550;
+
+  white-space: nowrap;
+}
+
+.solver-arrow {
+  flex: 0 0 auto;
+
+  color: #a1a6ab;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — VIDEO
+========================================================= */
+
+.project-video-wrap {
+  margin-top: 6px;
+}
+
+.project-video {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+
+  background: #000000;
+
+  border-radius: 10px;
+}
+
+.project-caption {
+  margin-top: 12px !important;
+
+  color: #6a7076 !important;
+
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   CANAL — EQUATIONS
+========================================================= */
+
+.equation-block {
+  margin-bottom: 34px;
+}
+
+.equation-block:last-child {
+  margin-bottom: 0;
+}
+
+.equation-title {
+  margin: 0 0 10px;
+
+  color: #25282c;
+
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.equation {
+  margin: 0 0 14px;
+
+  padding: 18px 20px;
+
+  overflow-x: auto;
+
+  border: 1px solid #e8eaed;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.equation-block p:not(.equation-title) {
+  margin: 0;
+
+  color: #565c62;
+}
+
+
+/* =========================================================
+   CANAL — NOTATION
+========================================================= */
+
+.notation-box {
+  margin: 0 0 42px;
+
+  padding: 22px 24px;
+
+  border: 1px solid #e8eaed;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.notation-title {
+  margin: 0 0 18px;
+
+  color: #303438;
+
+  font-size: 0.92rem;
+  font-weight: 650;
+}
+
+.notation-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 11px 28px;
+}
+
+.notation-grid > div {
+  display: grid;
+
+  grid-template-columns: 72px 1fr;
+
+  gap: 8px;
+
+  align-items: baseline;
+
+  color: #5a6066;
+
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.notation-symbol {
+  color: #292d31;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   PROJECT PAGE — REFERENCE
+========================================================= */
+
+.project-reference {
+  padding-top: 8px;
+}
+
+.project-reference em {
+  color: #44494e;
+}
+
+.project-link {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   CIRCA — AWARD
+========================================================= */
+
+.circa-award {
+  display: inline-block;
+
+  margin: 26px 0 0;
+
+  padding: 7px 12px;
+
+  border-radius: 7px;
+
+  background: #f3f1ff;
+  color: #5d50a8;
+
+  font-size: 0.86rem;
+  font-weight: 650;
+}
+
+
+/* =========================================================
+   CIRCA — HERO IMAGE
+========================================================= */
+
+.circa-hero-image {
+  display: block;
+
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+
+  margin: 0 auto;
+
+  border-radius: 12px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CIRCA — REGULAR FIGURES
+========================================================= */
+
+.project-figure {
+  display: block;
+
+  width: 78%;
+  max-width: 600px;
+  height: auto;
+
+  margin: 0 auto;
+
+  border-radius: 10px;
+
+  object-fit: contain;
+}
+
+
+/* Align captions with smaller figures */
+
+.project-figure + .project-caption {
+  width: 78%;
+  max-width: 600px;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+
+/* Optional finer image control */
+
+.figure-diagram {
+  max-width: 540px;
+}
+
+.figure-lidar {
+  max-width: 620px;
+}
+
+.figure-sound {
+  max-width: 620px;
+}
+
+
+/* =========================================================
+   CIRCA — MY ROLE
+========================================================= */
+
+.project-role {
+  max-width: 760px;
+
+  padding: 22px 24px;
+
+  border: 1px solid #e8eaed;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.project-role-label {
+  margin: 0 0 10px;
+
+  color: #303438;
+
+  font-size: 0.9rem;
+  font-weight: 650;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+}
+
+.project-role p:last-child {
+  margin: 0;
+
+  color: #555b61;
+}
+
+
+/* =========================================================
+   CIRCA — SYSTEM FLOW
+========================================================= */
+
+.circa-flow {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+
+  align-items: center;
+
+  gap: 12px;
+
+  overflow-x: auto;
+}
+
+.circa-flow-group {
+  min-width: 145px;
+}
+
+.circa-flow-label {
+  margin: 0 0 9px;
+
+  color: #858a8f;
+
+  font-size: 0.76rem;
+  font-weight: 650;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+.circa-flow-box {
+  margin-bottom: 7px;
+
+  padding: 10px 12px;
+
+  border: 1px solid #e7e9ec;
+
+  border-radius: 7px;
+
+  background: #fafbfc;
+
+  color: #4d5257;
+
+  font-size: 0.78rem;
+  font-weight: 550;
+
+  text-align: center;
+}
+
+.circa-flow-box:last-child {
+  margin-bottom: 0;
+}
+
+.circa-flow-arrow {
+  color: #a2a7ac;
+
+  font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   CIRCA — SIGNAL FLOW
+========================================================= */
+
+.circa-signal-flow {
+  margin-top: 4px;
+}
+
+.circa-section-note {
+  margin-top: 18px !important;
+
+  color: #686e74 !important;
+
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   CIRCA — IoT CARDS
+========================================================= */
+
+.circa-iot-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 30px;
+}
+
+.circa-iot-item {
+  padding: 20px;
+
+  border: 1px solid #e8eaed;
+
+  border-radius: 10px;
+
+  background: #fafbfc;
+}
+
+.circa-iot-icon {
+  display: inline-block;
+
+  margin-bottom: 19px;
+
+  color: #8273d3;
+
+  font-size: 0.76rem;
+  font-weight: 700;
+
+  letter-spacing: 0.05em;
+}
+
+.circa-iot-item h3 {
+  margin: 0 0 7px;
+
+  color: #282b2e;
+
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
+.circa-iot-item p {
+  margin: 0;
+
+  color: #62676c;
+
+  font-size: 0.87rem;
+  line-height: 1.55;
+}
+
+
+/* =========================================================
    TABLET
 ========================================================= */
 
@@ -592,6 +1208,9 @@ footer {
     padding-top: 42px;
   }
 
+
+  /* Home hero */
+
   .hero {
     display: flex;
 
@@ -621,6 +1240,9 @@ footer {
     margin-top: 35px;
   }
 
+
+  /* Sections */
+
   .section {
     margin-bottom: 75px;
   }
@@ -630,6 +1252,9 @@ footer {
 
     font-size: 1.4rem;
   }
+
+
+  /* Home research */
 
   .research-item {
     display: block;
@@ -642,6 +1267,9 @@ footer {
     margin-bottom: 24px;
   }
 
+
+  /* Education */
+
   .education {
     display: block;
   }
@@ -650,359 +1278,8 @@ footer {
     margin-top: 10px !important;
   }
 
-  footer {
-    align-items: flex-start;
 
-    flex-direction: column;
-
-    gap: 8px;
-
-    margin-top: 80px;
-  }
-
-}
-
-/* =========================================================
-   PROJECT PAGE
-========================================================= */
-
-.project-page {
-  max-width: 860px;
-}
-
-
-/* Navigation */
-
-.project-nav {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  margin-bottom: 90px;
-
-  font-size: 0.9rem;
-}
-
-.project-nav > a {
-  font-weight: 600;
-}
-
-.project-nav-links {
-  display: flex;
-
-  gap: 18px;
-}
-
-
-/* Hero */
-
-.project-hero {
-  max-width: 760px;
-
-  margin-bottom: 90px;
-}
-
-.project-kicker {
-  margin: 0 0 14px;
-
-  color: #7c8288;
-
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.project-title {
-  margin: 0;
-
-  color: #18191b;
-
-  font-size: clamp(2.4rem, 6vw, 3.7rem);
-  line-height: 1.08;
-
-  font-weight: 720;
-
-  letter-spacing: -0.045em;
-}
-
-.project-subtitle {
-  max-width: 680px;
-
-  margin: 22px 0 0;
-
-  color: #565c62;
-
-  font-size: 1.15rem;
-  line-height: 1.55;
-}
-
-.project-tags {
-  margin-top: 28px;
-}
-
-
-/* Sections */
-
-.project-section {
-  max-width: 760px;
-
-  margin-bottom: 80px;
-}
-
-.project-section h2 {
-  margin-bottom: 22px;
-}
-
-.project-section > p {
-  margin: 0 0 16px;
-
-  color: #3e4348;
-}
-
-.project-section > p:last-child {
-  margin-bottom: 0;
-}
-
-
-/* Implementation blocks */
-
-.project-points {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 18px;
-}
-
-.project-point {
-  padding: 22px 23px;
-
-  border: 1px solid #e8eaed;
-
-  border-radius: 10px;
-
-  background: #fafbfc;
-}
-
-.project-point h3 {
-  margin: 0 0 8px;
-
-  color: #26292c;
-
-  font-size: 0.98rem;
-  font-weight: 650;
-}
-
-.project-point p {
-  margin: 0;
-
-  color: #5d6267;
-
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-
-/* Solver flow */
-
-.solver-flow {
-  display: flex;
-
-  align-items: center;
-
-  gap: 9px;
-
-  overflow-x: auto;
-
-  padding: 8px 0;
-}
-
-.solver-step {
-  flex: 0 0 auto;
-
-  padding: 10px 14px;
-
-  border-radius: 7px;
-
-  background: #f1f3f5;
-
-  color: #4c5257;
-
-  font-size: 0.8rem;
-  font-weight: 550;
-
-  white-space: nowrap;
-}
-
-.solver-arrow {
-  flex: 0 0 auto;
-
-  color: #a1a6ab;
-}
-
-
-/* Reference */
-
-.project-reference {
-  padding-top: 8px;
-}
-
-.project-reference em {
-  color: #44494e;
-}
-
-.project-link {
-  display: inline-block;
-
-  margin-top: 5px;
-
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.project-item .project-link {
-  display: inline-block;
-  margin-top: 18px;
-}
-
-
-/* =========================================================
-   VIDEO
-========================================================= */
-
-.project-video-wrap {
-  margin-top: 6px;
-}
-
-.project-video {
-  display: block;
-  width: 100%;
-  max-width: 760px;
-
-  border-radius: 10px;
-  background: #000000;
-}
-
-.project-caption {
-  margin-top: 10px !important;
-
-  color: #6a7076 !important;
-  font-size: 0.9rem;
-}
-
-
-/* =========================================================
-   EQUATIONS
-========================================================= */
-
-.equation-block {
-  margin-bottom: 34px;
-}
-
-.equation-block:last-child {
-  margin-bottom: 0;
-}
-
-.equation-title {
-  margin: 0 0 10px;
-
-  color: #25282c;
-  font-size: 0.98rem;
-  font-weight: 650;
-}
-
-.equation {
-  margin: 0 0 14px;
-  padding: 18px 20px;
-
-  border: 1px solid #e8eaed;
-  border-radius: 10px;
-
-  background: #fafbfc;
-
-  overflow-x: auto;
-}
-
-.equation-block p:not(.equation-title) {
-  margin: 0;
-  color: #565c62;
-}
-
-/* =========================================================
-   NOTATION
-========================================================= */
-
-.notation-box {
-  margin: 0 0 42px;
-
-  padding: 22px 24px;
-
-  border: 1px solid #e8eaed;
-  border-radius: 10px;
-
-  background: #fafbfc;
-}
-
-.notation-title {
-  margin: 0 0 18px;
-
-  color: #303438;
-
-  font-size: 0.92rem;
-  font-weight: 650;
-}
-
-.notation-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 11px 28px;
-}
-
-.notation-grid > div {
-  display: grid;
-
-  grid-template-columns: 72px 1fr;
-
-  gap: 8px;
-
-  align-items: baseline;
-
-  color: #5a6066;
-
-  font-size: 0.82rem;
-  line-height: 1.45;
-}
-
-.notation-symbol {
-  color: #292d31;
-
-  font-weight: 600;
-}
-
-
-/* Mobile */
-
-@media (max-width: 620px) {
-
-  .notation-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-
-/* =========================================================
-   PROJECT PAGE — MOBILE
-========================================================= */
-
-@media (max-width: 620px) {
+  /* Project page */
 
   .project-nav {
     margin-bottom: 60px;
@@ -1028,189 +1305,24 @@ footer {
     grid-template-columns: 1fr;
   }
 
-}/* =========================================================
-   CIRCA PROJECT PAGE
-========================================================= */
 
-.circa-award {
-  display: inline-block;
+  /* Notation */
 
-  margin: 26px 0 0;
-
-  padding: 7px 12px;
-
-  border-radius: 7px;
-
-  background: #f3f1ff;
-  color: #5d50a8;
-
-  font-size: 0.86rem;
-  font-weight: 650;
-}
+  .notation-grid {
+    grid-template-columns: 1fr;
+  }
 
 
-/* =========================================================
-   CIRCA HERO IMAGE
-========================================================= */
+  /* Circa images */
 
-.circa-hero-image {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  border-radius: 12px;
-
-  object-fit: contain;
-}
+  .project-figure,
+  .project-figure + .project-caption {
+    width: 100%;
+    max-width: 100%;
+  }
 
 
-/* =========================================================
-   CIRCA SYSTEM FLOW
-========================================================= */
-
-.circa-flow {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    auto
-    minmax(0, 1fr)
-    auto
-    minmax(0, 1fr)
-    auto
-    minmax(0, 1fr);
-
-  align-items: center;
-
-  gap: 12px;
-
-  overflow-x: auto;
-}
-
-.circa-flow-group {
-  min-width: 145px;
-}
-
-.circa-flow-label {
-  margin: 0 0 9px;
-
-  color: #858a8f;
-
-  font-size: 0.76rem;
-  font-weight: 650;
-
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.circa-flow-box {
-  margin-bottom: 7px;
-
-  padding: 10px 12px;
-
-  border: 1px solid #e7e9ec;
-  border-radius: 7px;
-
-  background: #fafbfc;
-
-  color: #4d5257;
-
-  font-size: 0.78rem;
-  font-weight: 550;
-
-  text-align: center;
-}
-
-.circa-flow-box:last-child {
-  margin-bottom: 0;
-}
-
-.circa-flow-arrow {
-  color: #a2a7ac;
-
-  font-size: 1.15rem;
-}
-
-
-/* =========================================================
-   CIRCA SIGNAL FLOW
-========================================================= */
-
-.circa-signal-flow {
-  margin-top: 4px;
-}
-
-.circa-section-note {
-  margin-top: 18px !important;
-
-  color: #686e74 !important;
-
-  font-size: 0.9rem;
-}
-
-
-/* =========================================================
-   CIRCA IoT
-========================================================= */
-
-.circa-iot-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(3, minmax(0, 1fr));
-
-  gap: 16px;
-
-  margin-top: 30px;
-}
-
-.circa-iot-item {
-  padding: 20px;
-
-  border: 1px solid #e8eaed;
-  border-radius: 10px;
-
-  background: #fafbfc;
-}
-
-.circa-iot-icon {
-  display: inline-block;
-
-  margin-bottom: 19px;
-
-  color: #8273d3;
-
-  font-size: 0.76rem;
-  font-weight: 700;
-
-  letter-spacing: 0.05em;
-}
-
-.circa-iot-item h3 {
-  margin: 0 0 7px;
-
-  color: #282b2e;
-
-  font-size: 0.98rem;
-  font-weight: 650;
-}
-
-.circa-iot-item p {
-  margin: 0;
-
-  color: #62676c;
-
-  font-size: 0.87rem;
-  line-height: 1.55;
-}
-
-
-/* =========================================================
-   CIRCA MOBILE
-========================================================= */
-
-@media (max-width: 720px) {
+  /* Circa flow */
 
   .circa-flow {
     grid-template-columns: 1fr;
@@ -1227,69 +1339,16 @@ footer {
   }
 
 
-/* =========================================================
-   CIRCA PROJECT PAGE
-========================================================= */
+  /* Footer */
 
-.circa-award {
-  display: inline-block;
+  footer {
+    align-items: flex-start;
 
-  margin: 26px 0 0;
-  padding: 7px 12px;
+    flex-direction: column;
 
-  border-radius: 7px;
+    gap: 8px;
 
-  background: #f3f1ff;
-  color: #5d50a8;
+    margin-top: 80px;
+  }
 
-  font-size: 0.86rem;
-  font-weight: 650;
-}
-
-.circa-hero-image,
-.project-figure {
-  display: block;
-
-  width: 100%;
-  height: auto;
-
-  border-radius: 12px;
-
-  object-fit: contain;
-}
-
-.project-role {
-  max-width: 760px;
-
-  padding: 22px 24px;
-
-  border: 1px solid #e8eaed;
-  border-radius: 10px;
-
-  background: #fafbfc;
-}
-
-.project-role-label {
-  margin: 0 0 10px;
-
-  color: #303438;
-
-  font-size: 0.9rem;
-  font-weight: 650;
-
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.project-role p:last-child {
-  margin: 0;
-
-  color: #555b61;
-}
-
-.project-caption {
-  margin-top: 12px !important;
-
-  color: #6a7076 !important;
-  font-size: 0.9rem;
 }
